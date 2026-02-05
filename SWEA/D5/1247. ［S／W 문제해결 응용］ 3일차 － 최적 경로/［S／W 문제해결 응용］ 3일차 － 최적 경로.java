@@ -39,9 +39,9 @@ public class Solution {
 
 				arr[i] = new Point(x, y);
 			}
-			
-			result[0] = new Point(arr[1].x, arr[1].y);
-			result[N-1] = new Point(arr[0].x, arr[0].y);
+
+			result[0] = arr[1];
+			result[N-1] = arr[0];
 			
 			perm(1);
 			System.out.println("#" + t + " " + min);
@@ -66,7 +66,7 @@ public class Solution {
 			}
 			
 			visited[i] = true;
-			result[depth] = new Point (arr[i].x, arr[i].y);
+			result[depth] = arr[i];
 			perm(depth+1);
 			visited[i] = false;
 		}
