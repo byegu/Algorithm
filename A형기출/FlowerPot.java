@@ -4,8 +4,8 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class FlowerPot {
-	static int N; // È­ºĞ °³¼ö
-	static int P; // ºñ·á¸¦ ÁÖ¾úÀ» ¶§ ´ú ÀÚ¶ó´Â ¼öÄ¡
+	static int N; // í™”ë¶„ ê°œìˆ˜
+	static int P; // ë¹„ë£Œë¥¼ ì£¼ì—ˆì„ ë•Œ ëœ ìë¼ëŠ” ìˆ˜ì¹˜
 	static int sum;
 	static int max;
 	
