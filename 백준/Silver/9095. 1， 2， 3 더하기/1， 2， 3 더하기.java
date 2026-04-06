@@ -3,8 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Main {
-	static int T;
-	static int count;
+    static int T;
 	static int N;
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -12,26 +11,16 @@ public class Main {
 		
 		for (int t = 0; t < T; t++) {
 			N = Integer.parseInt(br.readLine());
-			count = 0;
+			int dp[] = new int[N+3];
+			dp[1] = 1;
+			dp[2] = 2;
+			dp[3] = 4;
 			
-			solve(0);
+			for (int i = 4; i < N+2; i++) {
+				dp[i] = dp[i-3] + dp[i-2] + dp[i-1]; 
+			}
 			
-			System.out.println(count);
+			System.out.println(dp[N]);
 		}
-
-	}
-	static void solve(int n) {
-		if (N == n) {
-			count++;
-			return;
-		}
-		
-		if (n > N) {
-			return;
-		}
-		
-		solve(n+3);
-		solve(n+2);
-		solve(n+1);
 	}
 }
