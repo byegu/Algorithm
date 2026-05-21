@@ -18,7 +18,6 @@ class Solution {
     }
     
     public void dfs(int depth, int k, int[][] dungeons, int[] list) {
-        
         if (depth == N) {
             int result = explore(list, k, dungeons);
             max = Math.max(result, max);
@@ -33,7 +32,6 @@ class Solution {
                 visited[i] = false;
             }
         }
-        
         return;
     }
     
@@ -45,8 +43,6 @@ class Solution {
             if (fatigue >= dungeons[idx][0]) {
                 fatigue -= dungeons[idx][1];
                 result++;
-                
-                
             }
         }
         return result;
