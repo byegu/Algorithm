@@ -1,7 +1,6 @@
 import java.util.*;
 
 class Solution {
-
     class Point {
         int r;
         int c;
@@ -13,7 +12,6 @@ class Solution {
             this.count = count;
         }
     }
-
     static int[] dr = {0, 0, -1, 1};
     static int[] dc = {-1, 1, 0, 0};
 
@@ -24,7 +22,6 @@ class Solution {
     }
 
     public int bfs(String[] board) {
-
         int m = board.length;
         int n = board[0].length();
 
